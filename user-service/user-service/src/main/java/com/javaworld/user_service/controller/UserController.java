@@ -21,7 +21,7 @@ public class UserController {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public UserDto createUser(@Valid @RequestBody UserDto userDto){
-        log.info("UserContoller :: createUser {} ", userDto.getEmailAddress());
+        log.info("In UserContoller :: createUser {} ", userDto.getEmailAddress());
         return userService.save(userDto);
     }
 
